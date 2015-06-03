@@ -1,0 +1,89 @@
+body{
+	background: #f0e7d7;
+	color: #777;
+}
+h1{
+	margin: 15px;
+}
+#container{
+	width: 900px;
+}
+ul.processus_list li a {
+	text-decoration: none;
+	color: #777;
+}
+ul.processus_list li a:hover {
+	text-decoration: inherit;
+	color: black;
+}
+ul.processus_list>li {
+	font-weight:bold;
+	font-size: 1.3em;
+}
+ul.taches_list>li {
+	font-weight:lighter;
+}
+ul.actions_list>li {
+	font-weight:lighter;
+}
+/* LISTES */
+#liste table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#liste th, td {
+    padding: 5px;
+}
+
+/* FORMULAIRES */
+form .required:after { 
+	content:"  *";
+	color: red; 
+}
+form input, textarea {	
+	width: 250px;
+	padding: 0px;
+	vertical-align: middle;
+	background: #f7f2ea;
+}
+form textarea {
+	width: 300px;
+	height: 5em;
+}
+form label {
+	display: inline-block;
+	width: 200px;
+	margin-right: 20px;
+	padding: 4px;
+	vertical-align: middle;
+	text-align: right;
+	font-size: 0.8em;
+}
+.btn-ajout{
+	margin-top: 14px;
+}
+#zegilooo_candidatsfcbundle_candidat div:not(:last-child){
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#zegilooo_candidatsfcbundle_candidat_Envoyer{
+	width: 150px;
+	margin-left: 220px;
+	margin-bottom: 30px;
+}
+.ui-datepicker table,.ui-widget-header,.ui-corner-all{
+	font-size: .85em;
+	margin: 0;
+	color: #777;	
+	background: #f7f2ea;
+	font-family: georgia, serif;
+}
+.ui-datepicker table,.ui-widget-header,.ui-corner-all{
+	background: #f7f2ea;
+}
+.ui-widget-header{
+	background: #f0e7d7;	
+}
+.vsmall{
+	font-size: 0.55em;	
+}
