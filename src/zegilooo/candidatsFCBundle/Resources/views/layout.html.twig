@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}Test Application{% endblock %}</title>		
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="robots" content="noarchive">
+    		<link rel="stylesheet" type="text/css" href="{{asset('bundles/candidatsFC/vendors/jquery-ui/jquery-ui.min.css')}}">
+    		<link rel="stylesheet" type="text/css" href="{{asset('bundles/candidatsFC/vendors/jquery-ui/jquery-ui.structure.css')}}">
+    		<link rel="stylesheet" type="text/css" href="{{asset('bundles/candidatsFC/vendors/jquery-ui/jquery-ui.theme.min.css')}}">
+    		<link rel="stylesheet" type="text/css" href="{{asset('bundles/candidatsFC/vendors/bootstrap-3.3.4-dist/css/bootstrap.min.css')}}">
+    		<link rel="stylesheet" type="text/css" href="{{asset('bundles/candidatsFC/vendors/bootstrap-3.3.4-dist/css/bootstrap-theme.min.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{asset('bundles/candidatsFC/css/index.css')}}">
+    </head>
+    <body>
+            <nav class="navbar navbar-default">
+              <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="/">Candidats FC<br><span class="vsmall">by Gilles Eschenbrenner</span></a>
+
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li><a href="/liste_candidat">Candidats</a></li>
+                    <li><a href="/liste_dossier">Dossiers de suivi</a></li>
+                    <li><a href="/lister_personnel">Personnels</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Paramétrages <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="/lister_typepresta">Types de prestations</a></li>
+                        <li><a href="/lister_typefc">Types de formations continues</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/lister_processus">Processus</a></li>
+                        <li><a href="/lister_tache">Tâches</a></li>
+                        <li><a href="/lister_action">Actions</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
+        <script src="{{asset('bundles/candidatsFC/vendors/jquery-ui/external/jquery/jquery.js')}}"></script>
+        <script src="{{asset('bundles/candidatsFC/vendors/jquery-ui/jquery-ui.min.js')}}"></script>
+        <script src="{{asset('bundles/candidatsFC/vendors/bootstrap-3.3.4-dist/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('bundles/candidatsFC/js/index.js')}}"></script>
+    </body>
+</html>

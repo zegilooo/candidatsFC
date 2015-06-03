@@ -1,0 +1,22 @@
+{% extends "zegilooocandidatsFCBundle::layout.html.twig" %}
+{% block title %}Liste des tâches{% endblock %}
+{% block body %}
+         <h1>Liste des tâches</h1>
+         <div id="liste">
+	        <table>
+			  <tr>
+			    <th>Nom</th>
+			    <th></th>
+			    <th></th>
+			  </tr>
+            {% for t in Tache %}
+			  <tr>
+			    <td>{{ t.processus }} / {{ t.numDansProcessus }} - {{ t.libelle }}  </td>	
+			    <td><a href="{{path('zegilooocandidats_fc_modifie_tache',{'id':t.id})}}">Modifier</a></td>	
+			    <td><a href="{{path('zegilooocandidats_fc_supprime_tache',{'id':t.id})}}" class="red suppr">Supprimer</a></td>
+			  </tr>            
+			{% endfor %}
+			</table>
+		</div>
+		<a href="{{path('zegilooocandidats_fc_ajout_tache')}}" class="btn btn-info btn-ajout" role="button">ajouter une tâche</a>
+{% endblock %}

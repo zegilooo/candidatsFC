@@ -1,0 +1,112 @@
+zegilooocandidats_fc_homepage:
+    path:     /
+    defaults: { _controller: zegilooocandidatsFCBundle:Default:index }
+
+zegilooocandidats_fc_ajout:
+    path:     /ajouter_candidat
+    defaults: { _controller: zegilooocandidatsFCBundle:Candidat:ajouterCandidat }
+zegilooocandidats_fc_modif:
+    path:     /modifier_candidat/{id}
+    defaults: { _controller: zegilooocandidatsFCBundle:Candidat:modifierCandidat }
+zegilooocandidats_fc_suppr:
+    path:     /supprimer_candidat/{id}
+    defaults: { _controller: zegilooocandidatsFCBundle:Candidat:supprimerCandidat }
+zegilooocandidats_fc_liste:
+    path:     /liste_candidat
+    defaults: { _controller: zegilooocandidatsFCBundle:Candidat:listerCandidat }
+zegilooocandidats_fc_recherche_candidat:
+    path:     /recherche_candidat
+    defaults: { _controller: zegilooocandidatsFCBundle:Candidat:rechercher }
+
+zegilooocandidats_fc_ajoutdossier:
+    path:     /ajouter_dossier
+    defaults: { _controller: zegilooocandidatsFCBundle:DossierSuivi:ajouterDossierSuivi }
+zegilooocandidats_fc_modifdossier:
+    path:     /modifier_dossier/{id}
+    defaults: { _controller: zegilooocandidatsFCBundle:DossierSuivi:modifierDossierSuivi}
+zegilooocandidats_fc_supprdossier:
+    path:     /supprimer_dossier/{id}
+    defaults: { _controller: zegilooocandidatsFCBundle:DossierSuivi:supprimerDossierSuivi }
+zegilooocandidats_fc_listedossier:
+    path:     /liste_dossier
+    defaults: { _controller: zegilooocandidatsFCBundle:DossierSuivi:listerDossierSuivi}
+
+zegilooocandidats_fc_ajout_typepresta:
+    path:     /ajouter_typepresta
+    defaults: { _controller: zegilooocandidatsFCBundle:TypePrestation:ajouter }
+zegilooocandidats_fc_modifie_typepresta:
+    path:     /modifier_typepresta/{id}
+    defaults: { _controller: zegilooocandidatsFCBundle:TypePrestation:modifier }
+zegilooocandidats_fc_supprime_typepresta:
+    path:     /suprimer_typepresta/{id}
+    defaults: { _controller: zegilooocandidatsFCBundle:TypePrestation:supprimer }
+zegilooocandidats_fc_liste_typepresta:
+    path:     /lister_typepresta
+    defaults: { _controller: zegilooocandidatsFCBundle:TypePrestation:lister }
+
+zegilooocandidats_fc_ajout_typefc:
+    path:     /ajouter_typefc
+    defaults: { _controller: zegilooocandidatsFCBundle:TypeFC:ajouter }
+zegilooocandidats_fc_modifie_typefc:
+    path:     /modifier_typefc/{id}
+    defaults: { _controller: zegilooocandidatsFCBundle:TypeFC:modifier }
+zegilooocandidats_fc_supprime_typefc:
+    path:     /supprimer_typefc/{id}
+    defaults: { _controller: zegilooocandidatsFCBundle:TypeFC:supprimer }
+zegilooocandidats_fc_liste_typefc:
+    path:     /lister_typefc
+    defaults: { _controller: zegilooocandidatsFCBundle:TypeFC:lister }
+
+zegilooocandidats_fc_ajout_personnel:
+    path:     /ajouter_personnel
+    defaults: { _controller: zegilooocandidatsFCBundle:Personnel:ajouter }
+zegilooocandidats_fc_modifie_personnel:
+    path:     /modifier_personnel/{id}
+    defaults: { _controller: zegilooocandidatsFCBundle:Personnel:modifier }
+zegilooocandidats_fc_supprime_personnel:
+    path:     /supprimer_personnel/{id}
+    defaults: { _controller: zegilooocandidatsFCBundle:Personnel:supprimer }
+zegilooocandidats_fc_liste_personnel:
+    path:     /lister_personnel
+    defaults: { _controller: zegilooocandidatsFCBundle:Personnel:lister }
+
+zegilooocandidats_fc_ajout_processus:
+    path:     /ajouter_processus
+    defaults: { _controller: zegilooocandidatsFCBundle:Processus:ajouter }
+zegilooocandidats_fc_modifie_processus:
+    path:     /modifier_processus/{id}
+    defaults: { _controller: zegilooocandidatsFCBundle:Processus:modifier }
+zegilooocandidats_fc_supprime_processus:
+    path:     /supprimer_processus/{id}
+    defaults: { _controller: zegilooocandidatsFCBundle:Processus:supprimer }
+zegilooocandidats_fc_liste_processus:
+    path:     /lister_processus
+    defaults: { _controller: zegilooocandidatsFCBundle:Processus:lister }
+
+zegilooocandidats_fc_ajout_action:
+    path:     /ajouter_action
+    defaults: { _controller: zegilooocandidatsFCBundle:Action:ajouter }
+zegilooocandidats_fc_modifie_action:
+    path:     /modifier_action/{id}
+    defaults: { _controller: zegilooocandidatsFCBundle:Action:modifier }
+zegilooocandidats_fc_supprime_action:
+    path:     /supprimer_action/{id}
+    defaults: { _controller: zegilooocandidatsFCBundle:Action:supprimer }
+zegilooocandidats_fc_liste_action:
+    path:     /lister_action
+    defaults: { _controller: zegilooocandidatsFCBundle:Action:lister }
+
+zegilooocandidats_fc_ajout_tache:
+    path:     /ajouter_tache
+    defaults: { _controller: zegilooocandidatsFCBundle:Tache:ajouter }
+zegilooocandidats_fc_modifie_tache:
+    path:     /modifier_tache/{id}
+    defaults: { _controller: zegilooocandidatsFCBundle:Tache:modifier }
+zegilooocandidats_fc_supprime_tache:
+    path:     /supprimer_tache/{id}
+    defaults: { _controller: zegilooocandidatsFCBundle:Tache:supprimer }
+zegilooocandidats_fc_liste_tache:
+    path:     /lister_tache
+    defaults: { _controller: zegilooocandidatsFCBundle:Tache:lister }
+
+

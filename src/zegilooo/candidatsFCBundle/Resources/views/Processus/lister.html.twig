@@ -1,0 +1,22 @@
+{% extends "zegilooocandidatsFCBundle::layout.html.twig" %}
+{% block title %}Liste des Processus{% endblock %}
+{% block body %}
+         <h1>Liste des Processus</h1>
+         <div id="liste">
+	        <table>
+			  <tr>
+			    <th>Libelle</th>
+			    <th></th>
+			    <th></th>
+			  </tr>
+            {% for t in Processus %}
+			  <tr>
+			    <td>{{ t.libelle }}</td>
+			    <td><a href="{{path('zegilooocandidats_fc_modifie_processus',{'id':t.id})}}">Modifier</a></td>	
+			    <td><a href="{{path('zegilooocandidats_fc_supprime_processus',{'id':t.id})}}" class="red suppr">Supprimer</a></td>
+			  </tr>            
+			{% endfor %}
+			</table>
+		</div>
+		<a href="{{path('zegilooocandidats_fc_ajout_processus')}}" class="btn btn-info btn-ajout" role="button">ajouter un Processus</a>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "zegilooocandidatsFCBundle::layout.html.twig" %}
+{% block title %}Suivi des stagiaires à la Formation Continue{% endblock %}
+{% block body %}
+         <h1>Suivi des stagiaires à la Formation Continue</h1>
+         <h2>Liste <i>dynamique</i> des processus :</h2>
+         <p>Note : la liste ci-dessous peut-être mise à jour via le menu <b><i>paramétrages</i></b><br>
+         Elle tient compte de l'ordre des tâches et des actions dans chaque processus<br>
+         Chaque élément de la liste est cliquable et renvoi vers le formulaire de modification correspondant</p>         
+		<ul class="processus_list">           
+			{% for p in Processus %}
+				<li><a href="{{path('zegilooocandidats_fc_modifie_processus',{'id':p.id})}}">{{ p.libelle }}</a> 
+					<ul class="taches_list">
+						{% for t in p.getTaches %}
+						<li>{{t.numDansProcessus}} - <a href="{{path('zegilooocandidats_fc_modifie_tache',{'id':t.id})}}">{{t.libelle}}</a> 
+							<ul class="actions_list">
+								{% for a in t.getActions %}
+								<li>{{a.numDansTache}} - <a href="{{path('zegilooocandidats_fc_modifie_action',{'id':a.id})}}">{{a.libelle}}</a> 
+								</li>
+								{% endfor %}
+							</ul>
+						</li>
+						{% endfor %}
+					</ul>
+				</li>
+			{% endfor %}
+		</ul> 
+{% endblock %}
+

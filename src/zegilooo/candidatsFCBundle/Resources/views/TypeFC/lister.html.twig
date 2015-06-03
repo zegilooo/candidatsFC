@@ -1,0 +1,22 @@
+{% extends "zegilooocandidatsFCBundle::layout.html.twig" %}
+{% block title %}Liste des types de formations continues{% endblock %}
+{% block body %}
+         <h1>Liste des types de formations continues</h1>
+         <div id="liste">
+	        <table>
+			  <tr>
+			    <th>Nom</th>
+			    <th></th>
+			    <th></th>
+			  </tr>
+            {% for t in TypeFC %}
+			  <tr>
+			    <td>{{ t.nom }}</td>	
+			    <td><a href="{{path('zegilooocandidats_fc_modifie_typefc',{'id':t.id})}}">Modifier</a></td>	
+			    <td><a href="{{path('zegilooocandidats_fc_supprime_typefc',{'id':t.id})}}" class="red suppr">Supprimer</a></td>
+			  </tr>            
+			{% endfor %}
+			</table>
+		</div>
+		<a href="{{path('zegilooocandidats_fc_ajout_typefc')}}" class="btn btn-info btn-ajout" role="button">ajouter un type FC</a>
+{% endblock %}

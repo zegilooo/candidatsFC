@@ -1,0 +1,26 @@
+{% extends "zegilooocandidatsFCBundle::layout.html.twig" %}
+{% block title %}Liste des dossiers de suivi{% endblock %}
+{% block body %}
+         <h1>Liste des dossiers de suivi</h1>
+         <div id="liste">
+	        <table>
+			  <tr>
+			    <th>Dossier</th>
+			    <th>Candidat</th>
+			    <th>Date Création</th>
+			    <th></th>
+			    <th></th>
+			  </tr>
+            {% for t in DossierSuivis %}
+			  <tr>
+			    <td>{{ t.nom }}</td>
+			    <td>{{ t.candidat }}</td>	
+			    <td>{{ t.created|date('d/m/Y')}}</td>	
+			    <td><a href="{{path('zegilooocandidats_fc_modifdossier',{'id':t.id})}}">Modifier</a></td>	
+			    <td><a href="{{path('zegilooocandidats_fc_supprdossier',{'id':t.id})}}" class="red suppr">Supprimer</a></td>
+			  </tr>            
+			{% endfor %}
+			</table>
+		</div>
+		<a href="{{path('zegilooocandidats_fc_ajoutdossier')}}" class="btn btn-info btn-ajout" role="button">ajouter un dossier de suivi</a>
+{% endblock %}

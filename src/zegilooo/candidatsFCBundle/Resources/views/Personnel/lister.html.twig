@@ -1,0 +1,26 @@
+{% extends "zegilooocandidatsFCBundle::layout.html.twig" %}
+{% block title %}Liste des personnels{% endblock %}
+{% block body %}
+         <h1>Liste des personnels</h1>
+         <div id="liste">
+	        <table>
+			  <tr>
+			    <th>Civilité</th>
+			    <th>Nom</th>
+			    <th>Prénom</th>
+			    <th></th>
+			    <th></th>
+			  </tr>
+            {% for t in Personnel %}
+			  <tr>
+			    <td>{{ t.civilite }}</td>
+			    <td>{{ t.nom }}</td>
+			    <td>{{ t.prenom }}</td>	
+			    <td><a href="{{path('zegilooocandidats_fc_modifie_personnel',{'id':t.id})}}">Modifier</a></td>	
+			    <td><a href="{{path('zegilooocandidats_fc_supprime_personnel',{'id':t.id})}}" class="red suppr">Supprimer</a></td>
+			  </tr>            
+			{% endfor %}
+			</table>
+		</div>
+		<a href="{{path('zegilooocandidats_fc_ajout_personnel')}}" class="btn btn-info btn-ajout" role="button">ajouter un Personnel</a>
+{% endblock %}
